@@ -90,7 +90,6 @@ public class Gestionar_POST extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
 
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -320,7 +319,6 @@ public class Gestionar_POST extends javax.swing.JFrame {
 
         idMod.setBackground(new java.awt.Color(255, 255, 255));
         idMod.setForeground(new java.awt.Color(153, 153, 255));
-        idMod.setText("Ingrese el ID del POST a modificar");
         idMod.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         idMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,7 +329,6 @@ public class Gestionar_POST extends javax.swing.JFrame {
 
         id.setBackground(new java.awt.Color(255, 255, 255));
         id.setForeground(new java.awt.Color(153, 153, 255));
-        id.setText("Ingrese el ID del POST a eliminar");
         id.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

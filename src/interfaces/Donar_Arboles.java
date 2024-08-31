@@ -43,8 +43,6 @@ public class Donar_Arboles extends javax.swing.JFrame {
         background = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -64,8 +62,6 @@ public class Donar_Arboles extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\logo.png")); // NOI18N
         background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 220, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -73,26 +69,15 @@ public class Donar_Arboles extends javax.swing.JFrame {
         jLabel4.setText("GREEN WORLD");
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\city.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 500));
-
-        jLabel2.setText("jLabel2");
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
         background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("... PORQUE CADA ÁRBOL HACE LA DIFERENCIA.");
         background.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
         background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        fecha_entrega.setBackground(new java.awt.Color(255, 255, 255));
         fecha_entrega.setForeground(new java.awt.Color(153, 153, 255));
         fecha_entrega.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         fecha_entrega.addActionListener(new java.awt.event.ActionListener() {
@@ -103,11 +88,9 @@ public class Donar_Arboles extends javax.swing.JFrame {
         background.add(fecha_entrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 370, 40));
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("NOMBRE");
         background.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
 
-        nombre.setBackground(new java.awt.Color(255, 255, 255));
         nombre.setForeground(new java.awt.Color(153, 153, 255));
         nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         nombre.addActionListener(new java.awt.event.ActionListener() {
@@ -118,16 +101,13 @@ public class Donar_Arboles extends javax.swing.JFrame {
         background.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 370, 40));
 
         jLabel11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("FECHA DE ENTREGA");
         background.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("CANTIDAD DE ÁRBOLES");
         background.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
-        cantidad_arboles.setBackground(new java.awt.Color(255, 255, 255));
         cantidad_arboles.setForeground(new java.awt.Color(153, 153, 255));
         cantidad_arboles.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cantidad_arboles.addActionListener(new java.awt.event.ActionListener() {
@@ -138,11 +118,9 @@ public class Donar_Arboles extends javax.swing.JFrame {
         background.add(cantidad_arboles, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 370, 40));
 
         jLabel13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("LUGAR DE ENTREGA");
         background.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
-        lugar_entrega.setBackground(new java.awt.Color(255, 255, 255));
         lugar_entrega.setForeground(new java.awt.Color(153, 153, 255));
         lugar_entrega.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lugar_entrega.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +160,9 @@ public class Donar_Arboles extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -276,11 +256,9 @@ public class Donar_Arboles extends javax.swing.JFrame {
     private javax.swing.JTextField fecha_entrega;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

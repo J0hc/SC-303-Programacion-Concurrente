@@ -43,8 +43,6 @@ public class Inicio_App extends javax.swing.JFrame {
         background = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -62,8 +60,6 @@ public class Inicio_App extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\logo.png")); // NOI18N
         background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 220, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -72,41 +68,27 @@ public class Inicio_App extends javax.swing.JFrame {
         jLabel4.setText("GREEN WORLD");
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\city.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 290, 500));
-
-        jLabel2.setText("jLabel2");
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
         background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("INICIAR SESIÓN");
         background.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("CONTRASEÑA");
         background.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
         background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("USUARIO");
         background.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("USUARIO");
         background.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
-        usuario.setBackground(new java.awt.Color(255, 255, 255));
         usuario.setForeground(new java.awt.Color(153, 153, 255));
         usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -138,11 +120,9 @@ public class Inicio_App extends javax.swing.JFrame {
         });
         background.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 140, 50));
 
-        contra.setBackground(new java.awt.Color(255, 255, 255));
         contra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         background.add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 370, 40));
 
-        admin.setForeground(new java.awt.Color(0, 0, 0));
         admin.setText("SOY ADMINISTRADOR");
         admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +139,10 @@ public class Inicio_App extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -450,8 +433,6 @@ public class Inicio_App extends javax.swing.JFrame {
     private javax.swing.JPasswordField contra;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

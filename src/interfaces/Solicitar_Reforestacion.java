@@ -40,8 +40,6 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
         background = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -59,8 +57,6 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\logo.png")); // NOI18N
         background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 220, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -68,31 +64,19 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
         jLabel4.setText("GREEN WORLD");
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\city.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 500));
-
-        jLabel2.setText("jLabel2");
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
         background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("AYÚDANOS A SEMBRAR ÁRBOLES");
         background.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
         background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("URGENCIA");
         background.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
-        urgencia.setBackground(new java.awt.Color(255, 255, 255));
         urgencia.setForeground(new java.awt.Color(153, 153, 255));
         urgencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         urgencia.addActionListener(new java.awt.event.ActionListener() {
@@ -103,11 +87,9 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
         background.add(urgencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 370, 40));
 
         jLabel12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("TIPO TERRERO");
         background.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
-        terreno.setBackground(new java.awt.Color(255, 255, 255));
         terreno.setForeground(new java.awt.Color(153, 153, 255));
         terreno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         terreno.addActionListener(new java.awt.event.ActionListener() {
@@ -118,11 +100,9 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
         background.add(terreno, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 370, 40));
 
         jLabel13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("DISPONIBILIDAD");
         background.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
-        disponibilidad.setBackground(new java.awt.Color(255, 255, 255));
         disponibilidad.setForeground(new java.awt.Color(153, 153, 255));
         disponibilidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         disponibilidad.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +142,7 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
 
         pack();
@@ -250,10 +230,8 @@ public class Solicitar_Reforestacion extends javax.swing.JFrame {
     private javax.swing.JTextField disponibilidad;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

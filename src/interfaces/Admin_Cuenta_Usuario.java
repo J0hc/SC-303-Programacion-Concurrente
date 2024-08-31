@@ -336,7 +336,7 @@ public class Admin_Cuenta_Usuario extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        Dashboard_Usuario ventana = new Dashboard_Usuario();
+        Gestionar_Usuarios ventana = new Gestionar_Usuarios();
         ventana.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed

@@ -155,7 +155,6 @@ public class Dashboard_Administrador extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
 
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -207,12 +206,12 @@ public class Dashboard_Administrador extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(97, Short.MAX_VALUE)
+                .addContainerGap(107, Short.MAX_VALUE)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
 
-        background.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 350, 160));
+        background.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 350, 170));
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(78, 184, 222)));
@@ -359,15 +358,15 @@ public class Dashboard_Administrador extends javax.swing.JFrame {
                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                    .addContainerGap(112, Short.MAX_VALUE)
+                    .addContainerGap(122, Short.MAX_VALUE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
         );
 
-        background.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 340, 170));
+        background.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 340, 180));
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -427,10 +426,10 @@ public class Dashboard_Administrador extends javax.swing.JFrame {
                 .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        background.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, -1, 170));
+        background.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, -1, 180));
 
         jButton8.setBackground(new java.awt.Color(0, 134, 150));
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
@@ -579,6 +578,10 @@ public class Dashboard_Administrador extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        
+                Crear_Lugar_Reforestado ventana = new Crear_Lugar_Reforestado();
+        ventana.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed

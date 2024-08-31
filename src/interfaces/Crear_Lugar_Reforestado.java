@@ -212,6 +212,8 @@ public class Crear_Lugar_Reforestado extends javax.swing.JFrame {
 
     private void fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_fechaActionPerformed
 
     private void extencionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extencionActionPerformed
@@ -251,6 +253,7 @@ public class Crear_Lugar_Reforestado extends javax.swing.JFrame {
             System.out.println(verificar);
             //---INSERTAR EN TABLA DE BASE DE DATOS---
             if(!verificar) resultado = lugarUno.insertar();
+            JOptionPane.showMessageDialog(null, "Se ha creado el evento con exito!");
         } catch (SQLException ex) {
             Logger.getLogger(Crear_Lugar_Reforestado.class.getName()).log(Level.SEVERE, null, ex);
         }            

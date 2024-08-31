@@ -42,8 +42,6 @@ public class Registro_Administradores extends javax.swing.JFrame {
         background = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -65,8 +63,6 @@ public class Registro_Administradores extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\logo.png")); // NOI18N
         background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 220, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -74,31 +70,19 @@ public class Registro_Administradores extends javax.swing.JFrame {
         jLabel4.setText("GREEN WORLD");
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\city.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 540));
-
-        jLabel2.setText("jLabel2");
-        background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
         background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("REGRISTRO DE USUARIOS ADMIN");
         background.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("ROL");
         background.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
         background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        edad.setBackground(new java.awt.Color(255, 255, 255));
         edad.setForeground(new java.awt.Color(153, 153, 255));
         edad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         edad.addActionListener(new java.awt.event.ActionListener() {
@@ -109,11 +93,9 @@ public class Registro_Administradores extends javax.swing.JFrame {
         background.add(edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 370, 40));
 
         jLabel8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("USUARIO");
         background.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
 
-        usuario.setBackground(new java.awt.Color(255, 255, 255));
         usuario.setForeground(new java.awt.Color(153, 153, 255));
         usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -124,16 +106,13 @@ public class Registro_Administradores extends javax.swing.JFrame {
         background.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 370, 40));
 
         jLabel11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("CONTRASEÑA");
         background.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("CORREO");
         background.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
-        correo.setBackground(new java.awt.Color(255, 255, 255));
         correo.setForeground(new java.awt.Color(153, 153, 255));
         correo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         correo.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +122,6 @@ public class Registro_Administradores extends javax.swing.JFrame {
         });
         background.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 370, 40));
 
-        rol.setBackground(new java.awt.Color(255, 255, 255));
         rol.setForeground(new java.awt.Color(153, 153, 255));
         rol.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         rol.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +132,6 @@ public class Registro_Administradores extends javax.swing.JFrame {
         background.add(rol, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 370, 40));
 
         jLabel12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("EDAD");
         background.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, -1));
 
@@ -180,7 +157,6 @@ public class Registro_Administradores extends javax.swing.JFrame {
         });
         background.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 170, 40));
 
-        contra.setBackground(new java.awt.Color(255, 255, 255));
         contra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         background.add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 370, 40));
 
@@ -249,7 +225,7 @@ public class Registro_Administradores extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Dashboard_Administrador ventana = new Dashboard_Administrador();
+        Gestionar_Usuarios ventana = new Gestionar_Usuarios();
         ventana.setVisible(true);
         this.setVisible(false);
         
@@ -297,10 +273,8 @@ public class Registro_Administradores extends javax.swing.JFrame {
     private javax.swing.JTextField edad;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

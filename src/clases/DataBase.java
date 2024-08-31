@@ -19,7 +19,7 @@ public class DataBase {
     public static String Conexion(String dataBaseUrl){
         String url = dataBaseUrl;
         String usuario = "root";
-        String contra = "";
+        String contra = "test123";
         int resultado = 0;
 
         try{

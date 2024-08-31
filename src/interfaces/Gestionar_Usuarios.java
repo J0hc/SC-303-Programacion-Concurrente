@@ -8,6 +8,14 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -74,7 +82,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("TUS ACCIONES");
         background.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
         background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
@@ -82,8 +89,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(78, 184, 222));
 
         jLabel5.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Julián HC\\Documents\\NetBeansProjects\\INTERFACES_GRAFICAS\\src\\main\\java\\com\\mycompany\\interfaces_graficas\\img\\favicon.png")); // NOI18N
         jLabel5.setText("GREEN WORLD");
 
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -112,7 +117,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         background.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 80));
 
         jLabel26.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setText("CLIENTES");
         background.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, -1, -1));
 
@@ -121,7 +125,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel37.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(0, 0, 0));
         jLabel37.setText("AGREGAR USUARIOS ADMINISTRADORES");
         jPanel13.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 7, -1, 20));
 
@@ -142,11 +145,9 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel38.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(0, 0, 0));
         jLabel38.setText("MODIFICAR USUARIOS ADMINISTRADORES");
 
         jButton11.setBackground(new java.awt.Color(255, 232, 82));
-        jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.setText("MODIFICAR");
         jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -155,9 +156,7 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             }
         });
 
-        idMod.setBackground(new java.awt.Color(255, 255, 255));
         idMod.setForeground(new java.awt.Color(153, 153, 255));
-        idMod.setText("Ingrese el ID del lugar a modificar");
         idMod.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         idMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,13 +170,14 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel38)
-                .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(idMod, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton11)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                        .addComponent(idMod)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton11))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(jLabel38)
+                        .addGap(0, 25, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
@@ -198,7 +198,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51)));
 
         jLabel39.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(0, 0, 0));
         jLabel39.setText("ELIMINAR USUARIOS ADMINISTRADORES");
 
         jButton5.setBackground(new java.awt.Color(204, 0, 204));
@@ -211,9 +210,7 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             }
         });
 
-        idEl.setBackground(new java.awt.Color(255, 255, 255));
         idEl.setForeground(new java.awt.Color(153, 153, 255));
-        idEl.setText("Ingrese el ID del lugar a eliminar");
         idEl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         idEl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +225,7 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel39)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(idEl, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -248,13 +245,12 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        background.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        background.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 340, -1));
 
         jPanel19.setBackground(new java.awt.Color(255, 255, 255));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(78, 184, 222)));
 
         jLabel40.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(0, 0, 0));
         jLabel40.setText("AGREGAR USUARIOS CLIENTES");
 
         jButton7.setBackground(new java.awt.Color(0, 134, 150));
@@ -294,12 +290,9 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel45.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(0, 0, 0));
         jLabel45.setText("MODIFICAR USUARIOS CLIENTES");
 
-        idModUsuario.setBackground(new java.awt.Color(255, 255, 255));
         idModUsuario.setForeground(new java.awt.Color(153, 153, 255));
-        idModUsuario.setText("Ingrese el ID del lugar a modificar");
         idModUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         idModUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,7 +301,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         });
 
         jButton12.setBackground(new java.awt.Color(255, 232, 82));
-        jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("MODIFICAR");
         jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -322,14 +314,12 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel21Layout.setHorizontalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel45)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel45))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(idModUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idModUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton12)))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
@@ -351,7 +341,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51)));
 
         jLabel47.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(0, 0, 0));
         jLabel47.setText("ELIMINAR USUARIOS CLIENTES");
 
         jButton9.setBackground(new java.awt.Color(204, 0, 204));
@@ -364,9 +353,7 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             }
         });
 
-        idElUsuarios.setBackground(new java.awt.Color(255, 255, 255));
         idElUsuarios.setForeground(new java.awt.Color(153, 153, 255));
-        idElUsuarios.setText("Ingrese el ID del lugar a eliminar");
         idElUsuarios.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         idElUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -380,13 +367,14 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel47)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
-                .addComponent(idElUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton9)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addComponent(idElUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton9))
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addComponent(jLabel47)
+                        .addGap(0, 74, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel23Layout.setVerticalGroup(
@@ -394,11 +382,11 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idElUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(idElUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         background.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 310, -1));
@@ -446,6 +434,7 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        
         int eliminar = JOptionPane.showConfirmDialog(null, "¿Desea ELIMINAR permanentemente esta cuenta. " +
             "Esta acción no se puede revertir");
 
@@ -454,32 +443,46 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         if(eliminar == 0){
             try {
                 DataBase.delete("DELETE FROM administradores WHERE ID=?", id);
+                JOptionPane.showMessageDialog(null, "La cuenta ha sido eliminada con éxito");
             } catch (SQLException ex) {
                 Logger.getLogger(Gestionar_Usuarios.class.getName()).log(Level.SEVERE, null, ex);
             }
-            JOptionPane.showMessageDialog(null, "La cuenta ha sido eliminada con éxito");
+            
+        }else {
+            JOptionPane.showMessageDialog(null, "La operacion fue cancelada");
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        Dashboard_Administrador ventana = new Dashboard_Administrador();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        
+         String id = this.idElUsuarios.getText();
+
         int eliminar = JOptionPane.showConfirmDialog(null, "¿Desea ELIMINAR permanentemente esta cuenta. " +
             "Esta acción no se puede revertir");
-
-        String id = this.idElUsuarios.getText();
 
         if(eliminar == 0){
             try {
                 DataBase.delete("DELETE FROM usuarios WHERE ID=?", id);
+                JOptionPane.showMessageDialog(null, "La cuenta ha sido eliminada con éxito");
             } catch (SQLException ex) {
                 Logger.getLogger(Gestionar_Usuarios.class.getName()).log(Level.SEVERE, null, ex);
             }
-            JOptionPane.showMessageDialog(null, "La cuenta ha sido eliminada con éxito");
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "La operacion fue cancelada");
         }
+
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -595,10 +598,6 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_idElActionPerformed
 
-    private void idModUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idModUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idModUsuarioActionPerformed
-
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
          String idModUsuario = this.idModUsuario.getText();
@@ -702,6 +701,10 @@ public class Gestionar_Usuarios extends javax.swing.JFrame {
     private void idElUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idElUsuariosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idElUsuariosActionPerformed
+
+    private void idModUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idModUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idModUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
