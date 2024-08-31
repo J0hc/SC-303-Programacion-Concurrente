@@ -22,7 +22,20 @@ public class Verificaciones {
         return;
         }
     }
-    
+    public static boolean verificarCorreoBoolean(String correo) {
+    Pattern exp = Pattern.compile("[A-Za-z0-9+_.-]+@(.+)$");
+    Matcher coincidencia = exp.matcher(correo);
+
+    if(!coincidencia.find() || correo.equals("")) {
+        JOptionPane.showMessageDialog(null,
+            "Correo no válido",
+            "ERROR DE INICIO", JOptionPane.ERROR_MESSAGE);
+        return false;
+    }
+
+    return true;
+}
+
     public static void verificarEdad(int edad){
         if(edad == 0){
             JOptionPane.showMessageDialog(null,
@@ -31,6 +44,17 @@ public class Verificaciones {
             return;
         }
     }   
+    
+    public static boolean verificarEdadBoolean(int edad) {
+    if (edad == 0) {
+        JOptionPane.showMessageDialog(null,
+            "Edad no válida",
+            "ERROR DE INICIO", JOptionPane.ERROR_MESSAGE);
+        return false;
+    }
+    return true;
+}
+
 
     public static boolean espaciosBlanco(String ...campos){
         boolean retornoEspacio = false;

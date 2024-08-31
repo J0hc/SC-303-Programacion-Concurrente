@@ -178,7 +178,7 @@ public class Registro_App extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Dashboard_Administrador ventana = new Dashboard_Administrador();
+        Inicio_App ventana = new Inicio_App();
         ventana.setVisible(true);
         this.setVisible(false);
         
@@ -203,25 +203,28 @@ public class Registro_App extends javax.swing.JFrame {
         }
         
         Usuario miUsuario = new Usuario(usuario,contra,correo,edadUsuario);
-        boolean verificar = true;
-        verificar = Verificaciones.espaciosBlanco(usuario,contra,correo,edad);
-        Verificaciones.verificarCorreo(correo);
-        Verificaciones.verificarEdad(edadUsuario);
+        boolean verificar = Verificaciones.espaciosBlanco(usuario,contra,correo,edad);
+        boolean verificarE = Verificaciones.verificarCorreoBoolean(correo);
+        boolean verificarC = Verificaciones.verificarEdadBoolean(edadUsuario);
 
+        
+        
         try {
             System.out.println(verificar);
             //---INSERTAR EN TABLA DE BASE DE DATOS---
-            if(verificar) resultado = miUsuario.insertar();
-            if(verificar) JOptionPane.showMessageDialog(null, "Se pudo registrar con exito");
-            if(!verificar) JOptionPane.showMessageDialog(null, "No se pudo registrar, por favor confirme los datos.");
+            if(!verificar && verificarE && verificarC ) resultado = miUsuario.insertar();
+            if(!verificar && verificarE && verificarC) JOptionPane.showMessageDialog(null, "Se pudo registrar con exito");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"No se pudo registrar, por favor confirme los datos.");
+            Registro_App ventana = new Registro_App();
+            ventana.setVisible(true);
+            this.setVisible(false);
         }
         
         if(resultado == 1){
-            Registro_App ventana = new Registro_App();
-            ventana.setVisible(true);
-            this.setVisible(false);            
+        Inicio_App ventana = new Inicio_App();
+        ventana.setVisible(true);
+        this.setVisible(false);            
         }  
     }//GEN-LAST:event_jButton3ActionPerformed
 
