@@ -255,7 +255,7 @@ public class Crear_Lugar_Reforestado extends javax.swing.JFrame {
             if(!verificar) resultado = lugarUno.insertar();
             JOptionPane.showMessageDialog(null, "Se ha creado el evento con exito!");
         } catch (SQLException ex) {
-            Logger.getLogger(Crear_Lugar_Reforestado.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"Hubo un problema creando el evento por favor confirme los datos.");
         }            
     }//GEN-LAST:event_jButton7ActionPerformed
 

@@ -46,7 +46,7 @@ CREATE TABLE `donar_arboles` (
   `Nombre` varchar(70) NOT NULL,
   `Cantidad_Arboles` int(11) NOT NULL,
   `Lugar_Entrega` varchar(50) NOT NULL,
-  `Fecha_Entrega` datetime NOT NULL,
+  `Fecha_Entrega` varchar(50) NOT NULL,
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -70,8 +70,8 @@ CREATE TABLE `donar_dinero` (
 
 CREATE TABLE `eventos` (
   `Titulo` varchar(70) NOT NULL,
-  `Hora` datetime NOT NULL,
-  `Fecha` datetime NOT NULL,
+  `Hora` varchar(50) NOT NULL,
+  `Fecha` varchar(50) NOT NULL,
   `Cantidad_Voluntarios` int(11) NOT NULL,
   `Correo_Administrador` varchar(50) NOT NULL,
   `Lugar` varchar(50) NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `lugares_reforestados` (
   `Nombre` varchar(70) NOT NULL,
   `Lugar` varchar(50) NOT NULL,
   `Anotaciones` text NOT NULL,
-  `Fecha` datetime NOT NULL,
+  `Fecha` varchar(50) NOT NULL,
   `Extencion` varchar(100) NOT NULL,
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -118,7 +118,7 @@ CREATE TABLE `post` (
   `Lugar` varchar(60) NOT NULL,
   `Contenido` text NOT NULL,
   `Seccion` varchar(60) NOT NULL,
-  `Fecha` datetime NOT NULL,
+  `Fecha` varchar(50) NOT NULL,
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

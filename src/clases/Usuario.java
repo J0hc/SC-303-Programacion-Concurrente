@@ -36,7 +36,6 @@ public class Usuario extends Persona {
         System.out.println(resultado);
         
         DataBase.insert("INSERT INTO usuarios(Nombre, Contrasegna, Correo, Edad, ID) VALUES(?,?,?,?,?)", usuario, constrasegna, correo, String.valueOf(edad), id);
-        JOptionPane.showMessageDialog(null, "Se ha registrado correctamente"); 
         
         return 1;
     }

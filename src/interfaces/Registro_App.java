@@ -178,9 +178,10 @@ public class Registro_App extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Gestionar_Usuarios ventana = new Gestionar_Usuarios();
+        Dashboard_Administrador ventana = new Dashboard_Administrador();
         ventana.setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -192,6 +193,7 @@ public class Registro_App extends javax.swing.JFrame {
         String edad = this.edad.getText();
         int edadUsuario = 0; 
         int resultado = 0;
+        String mensaje;
         
         try{        
             edadUsuario = Integer.parseInt(edad);
@@ -201,21 +203,23 @@ public class Registro_App extends javax.swing.JFrame {
         }
         
         Usuario miUsuario = new Usuario(usuario,contra,correo,edadUsuario);
-        
-        boolean verificar = Verificaciones.espaciosBlanco(usuario,contra,correo,edad);
+        boolean verificar = true;
+        verificar = Verificaciones.espaciosBlanco(usuario,contra,correo,edad);
         Verificaciones.verificarCorreo(correo);
         Verificaciones.verificarEdad(edadUsuario);
 
         try {
             System.out.println(verificar);
             //---INSERTAR EN TABLA DE BASE DE DATOS---
-            if(!verificar) resultado = miUsuario.insertar();
+            if(verificar) resultado = miUsuario.insertar();
+            if(verificar) JOptionPane.showMessageDialog(null, "Se pudo registrar con exito");
+            if(!verificar) JOptionPane.showMessageDialog(null, "No se pudo registrar, por favor confirme los datos.");
         } catch (SQLException ex) {
-            Logger.getLogger(Registro_App.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"No se pudo registrar, por favor confirme los datos.");
         }
         
         if(resultado == 1){
-            Inicio_App ventana = new Inicio_App();
+            Registro_App ventana = new Registro_App();
             ventana.setVisible(true);
             this.setVisible(false);            
         }  
