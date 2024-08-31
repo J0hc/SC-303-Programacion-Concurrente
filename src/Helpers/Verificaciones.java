@@ -28,7 +28,7 @@ public class Verificaciones {
 
     if(!coincidencia.find() || correo.equals("")) {
         JOptionPane.showMessageDialog(null,
-            "Correo no válido",
+            "Correo no válido por favor utilizar el formato adecuado\n Ejemplo: usuario@gmail.com",
             "ERROR DE INICIO", JOptionPane.ERROR_MESSAGE);
         return false;
     }

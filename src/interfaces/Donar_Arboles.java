@@ -191,7 +191,7 @@ public class Donar_Arboles extends javax.swing.JFrame {
         String nombre = this.nombre.getText();
         String cantidad_arboles = this.cantidad_arboles.getText();
         String lugar_entrega = this.lugar_entrega.getText();
-        String fecha_entrega = this.lugar_entrega.getText();
+        String fecha_entrega = this.fecha_entrega.getText();
         int resultado = 0;
         
         DonarArboles miDonacion = new DonarArboles(nombre,cantidad_arboles,lugar_entrega,fecha_entrega);
